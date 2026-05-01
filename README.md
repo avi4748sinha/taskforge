@@ -133,9 +133,11 @@ Frontend:
 https://your-frontend-url  
 
 Backend:  
-taskforge-production-9eb7.up.railway.apphttps://your-backend-url  
+https://taskforge-production-9eb7.up.railway.apphttps://your-backend-url  
 
 Frontend communicates with backend using API calls.
 
 Example:
 VITE_API_URL=https://your-backend-url
+
+Feel free to reach out for collaboration or feedback.
