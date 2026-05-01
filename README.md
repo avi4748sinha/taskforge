@@ -130,7 +130,7 @@ The backend follows Controller -> Service -> Repository -> Database.
 ## 🌐 Live URLs
 
 Frontend:  
-https://your-frontend-url  
+https://taskforge-livid.vercel.app/
 
 Backend:  
 https://taskforge-production-9eb7.up.railway.apphttps://your-backend-url  
