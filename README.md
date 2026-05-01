@@ -127,43 +127,15 @@ The backend follows Controller -> Service -> Repository -> Database.
 - Repository: performs Prisma queries.
 - Middleware: handles authentication, validation, rate limiting, security headers, and centralized errors.
 
-## Railway Deployment
+## 🌐 Live URLs
 
-### Backend Railway par deploy kaise karna hai
+Frontend:  
+https://your-frontend-url  
 
-1. Railway dashboard open karo and `New Project` select karo.
-2. GitHub repo connect karo.
-3. Backend service ke root directory me `backend` set karo.
-4. Railway PostgreSQL plugin add karo.
-5. Backend service variables me add karo:
-   - `DATABASE_URL` Railway PostgreSQL se automatically milega.
-   - `JWT_SECRET` ek long random string.
-   - `JWT_EXPIRES_IN=7d`
-   - `FRONTEND_URL=https://your-frontend-domain`
-6. Build command:
-   ```bash
-   npm install && npm run prisma:generate && npm run build
-   ```
-7. Start command:
-   ```bash
-   npm run prisma:deploy && npm start
-   ```
+Backend:  
+taskforge-production-9eb7.up.railway.apphttps://your-backend-url  
 
-### Frontend Railway/Vercel par deploy kaise karna hai
+Frontend communicates with backend using API calls.
 
-1. Frontend ke liye new service create karo.
-2. Root directory `frontend` set karo.
-3. Environment variable add karo:
-   ```env
-   VITE_API_URL=https://your-backend-domain
-   ```
-4. Build command:
-   ```bash
-   npm install && npm run build
-   ```
-5. Output directory:
-   ```text
-   dist
-   ```
-
-Deploy hone ke baad backend `FRONTEND_URL` ko final frontend URL se update karna zaroori hai, warna browser CORS block karega.
+Example:
+VITE_API_URL=https://your-backend-url
